@@ -1,0 +1,16 @@
+{
+  "collectionName": "components_navigation_page_assembled_items",
+  "info": {
+    "name": "PageAssembledItem",
+    "icon": "align-center"
+  },
+  "options": {},
+  "attributes": {
+    "value": {
+      "type": "string"
+    },
+    "page_assembled": {
+      "model": "page-assembeled"
+    }
+  }
+}

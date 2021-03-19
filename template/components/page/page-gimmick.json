@@ -1,0 +1,19 @@
+{
+  "collectionName": "components_page_page_gimmicks",
+  "info": {
+    "name": "PageGimmick",
+    "icon": "american-sign-language-interpreting",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "type": {
+      "type": "enumeration",
+      "enum": [
+        "ContactFormular",
+        "BlogOverview",
+        "LeaveAReply"
+      ]
+    }
+  }
+}

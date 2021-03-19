@@ -1,0 +1,14 @@
+{
+  "collectionName": "components_page_parts",
+  "info": {
+    "name": "Part",
+    "icon": "file",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "part": {
+      "type": "richtext"
+    }
+  }
+}

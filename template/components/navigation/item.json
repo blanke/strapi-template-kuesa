@@ -1,0 +1,17 @@
+{
+  "collectionName": "components_navigation_items",
+  "info": {
+    "name": "Page",
+    "icon": "bars",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "value": {
+      "type": "string"
+    },
+    "page": {
+      "model": "page"
+    }
+  }
+}

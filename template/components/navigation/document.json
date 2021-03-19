@@ -1,0 +1,23 @@
+{
+  "collectionName": "components_navigation_documents",
+  "info": {
+    "name": "document",
+    "icon": "align-justify",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "media": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "files"
+      ],
+      "plugin": "upload",
+      "required": false
+    },
+    "value": {
+      "type": "string"
+    }
+  }
+}

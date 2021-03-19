@@ -1,0 +1,27 @@
+{
+  "kind": "singleType",
+  "collectionName": "sites",
+  "info": {
+    "name": "Site",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "navigation": {
+      "model": "navigation"
+    },
+    "blog_board": {
+      "model": "blog-board"
+    },
+    "baseUrl": {
+      "type": "string"
+    },
+    "homepage": {
+      "model": "page"
+    }
+  }
+}

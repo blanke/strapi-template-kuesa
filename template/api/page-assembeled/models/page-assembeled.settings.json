@@ -1,0 +1,30 @@
+{
+  "kind": "collectionType",
+  "collectionName": "page_assembeleds",
+  "info": {
+    "name": "PageAssembled(NotPrefered)",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "headline": {
+      "type": "string"
+    },
+    "subheadline": {
+      "type": "string"
+    },
+    "page_items": {
+      "collection": "page-item"
+    },
+    "title": {
+      "type": "string"
+    },
+    "contact": {
+      "model": "contact"
+    }
+  }
+}

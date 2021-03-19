@@ -1,0 +1,38 @@
+{
+  "collectionName": "components_page_part_with_images",
+  "info": {
+    "name": "PartWithImage",
+    "icon": "archway",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "headline": {
+      "type": "string"
+    },
+    "content": {
+      "type": "richtext"
+    },
+    "image": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images"
+      ],
+      "plugin": "upload",
+      "required": false
+    },
+    "position": {
+      "type": "enumeration",
+      "enum": [
+        "UpperRightCorner",
+        "RightOfText",
+        "LeftOfText",
+        "Bottom"
+      ]
+    },
+    "AcceptMarketingCookieOnly": {
+      "type": "boolean"
+    }
+  }
+}

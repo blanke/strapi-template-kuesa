@@ -1,0 +1,17 @@
+{
+  "collectionName": "components_navigation_sub_navigations",
+  "info": {
+    "name": "subNavigation",
+    "icon": "arrow-down",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "navigation": {
+      "model": "navigation"
+    },
+    "value": {
+      "type": "string"
+    }
+  }
+}
