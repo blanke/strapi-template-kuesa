@@ -102,40 +102,40 @@ async function importCategories() {
 }
 
 async function importHomepage() {
-  const files = {
-    "seo.shareImage": getFileData("default-image.png"),
-  };
-  await createEntry({ model: "homepage", entry: homepage, files });
+//  const files = {
+//    "seo.shareImage": getFileData("default-image.png"),
+//  };
+  await createEntry({ model: "homepage", entry: homepage }); //, files });
 }
 
 async function importWriters() {
   return Promise.all(writers.map(async (writer) => {
-    const files = {
-      picture: getFileData(`${writer.email}.jpg`),
-    };
+//    const files = {
+//      picture: getFileData(`${writer.email}.jpg`),
+//    };
     return createEntry({
       model: "writer",
       entry: writer,
-      files,
+      // files,
     });
   }));
 }
 
 async function importArticles() {
   return Promise.all(articles.map((article) => {
-    const files = {
-      image: getFileData(`${article.slug}.jpg`),
-    };
+//    const files = {
+//      image: getFileData(`${article.slug}.jpg`),
+//    };
     return createEntry({ model: "article", entry: article, files });
   }));
 }
 
 async function importGlobal() {
-  const files = {
-    "favicon": getFileData("favicon.png"),
-    "defaultSeo.shareImage": getFileData("default-image.png"),
-  };
-  return createEntry({ model: "global", entry: global, files });
+//  const files = {
+//    "favicon": getFileData("favicon.png"),
+//    "defaultSeo.shareImage": getFileData("default-image.png"),
+//  };
+  return createEntry({ model: "global", entry: global }); //, files });
 }
 
 async function importSeedData() {
