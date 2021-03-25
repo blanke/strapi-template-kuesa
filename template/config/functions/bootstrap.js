@@ -107,7 +107,6 @@ async function importEntity(element, entity, assets, image) {
 
 async function importEntities(constElements, entity, assets, image) {
   return Promise.all(constElements.map((element) => {
-    console.log("one element " + image);
     var files = {}
     if (element[image]) {
       files[image] = assets.get(`${element[image].name}`);
@@ -155,14 +154,10 @@ async function importAssets() {
 module.exports = async () => {
 
   const shouldImportSeedData = await isFirstRun();
-
-  const assets = await importAssets();
-  await importSeedData(assets);
-
   if (shouldImportSeedData) {
     try {
-      await importAssets();
-      await importSeedData();
+      const assets = await importAssets();
+      await importSeedData(assets);
     } catch (error) {
       console.log('Could not import seed data');
       console.error(error);
