@@ -3,15 +3,15 @@
 const fs = require("fs");
 const path = require("path");
 const mime = require("mime-types");
-const {
-  categories,
-  homepage,
-  writers,
-  articles,
-  global,
-  pages,
-  teaser
-} = require("../../data/data.json");
+
+const articleItems = require("../../data/article-item.json");
+const articles = require("../../data/article.json");
+const boards = require("../../data/blog-board.json");
+const pages = require("../../data/page.json");
+const site = require("../../data/site.json");
+const teasers = require("../../data/teaser.json");
+const navigations = require("../../data/navigation.json");
+const writers = require("../../data/writer.json");
 
 async function isFirstRun() {
   const pluginStore = strapi.store({
@@ -96,75 +96,73 @@ async function createEntry({ model, entry, files }) {
   }
 }
 
-async function importCategories() {
-  return Promise.all(categories.map((category) => {
-    return createEntry({ model: "category", entry: category });
+async function importEntity(element, entity, assets, image) {
+    var files = {}
+    if (element[image]) {
+      files[image] = assets.get(`${element[image].name}`);
+    };
+    return createEntry({ model: entity, entry: element, files });
+}
+
+
+async function importEntities(constElements, entity, assets, image) {
+  return Promise.all(constElements.map((element) => {
+    console.log("one element " + image);
+    var files = {}
+    if (element[image]) {
+      files[image] = assets.get(`${element[image].name}`);
+    };
+    return createEntry({ model: entity, entry: element, files });
   }));
 }
 
-async function importHomepage() {
-//  const files = {
-//    "seo.shareImage": getFileData("default-image.png"),
-//  };
-  await createEntry({ model: "homepage", entry: homepage }); //, files });
-}
-
-async function importWriters() {
-  return Promise.all(writers.map(async (writer) => {
-//    const files = {
-//      picture: getFileData(`${writer.email}.jpg`),
-//    };
-    return createEntry({
-      model: "writer",
-      entry: writer,
-      // files,
-    });
-  }));
-}
-
-async function importArticles() {
-  return Promise.all(articles.map((article) => {
-//    const files = {
-//      image: getFileData(`${article.slug}.jpg`),
-//    };
-    return createEntry({ model: "article", entry: article, files });
-  }));
-}
-
-async function importGlobal() {
-//  const files = {
-//    "favicon": getFileData("favicon.png"),
-//    "defaultSeo.shareImage": getFileData("default-image.png"),
-//  };
-  return createEntry({ model: "global", entry: global }); //, files });
-}
-
-async function importSeedData() {
-  // Allow read of application content types
+async function importSeedData(assets) {
   await setPublicPermissions({
-    global: ['find'],
-    homepage: ['find'],
-    article: ['find', 'findone'],
-    category: ['find', 'findone'],
     writer: ['find', 'findone'],
+    articleItem: ['find', 'findone'],
+    teaser: ['find', 'findone'],
+    article: ['find', 'findone'],
+    blogBoard: ['find', 'findone'],
+    navigation: ['find', 'findone'],
+    page: ['find', 'findone'],
+    site: ['find']
   });
 
   // Create all entries
-  await importCategories();
-  await importHomepage();
-  await importWriters();
-  await importArticles();
-  await importGlobal();
+  await importEntities(writers, "writer", assets, "image");
+  await importEntities(articleItems, "article-item", assets, "image");
+  await importEntities(articles, "article", assets, "image");
+  await importEntities(teasers, "teaser", assets, "image");
+  await importEntities(boards, "blog-board", assets, "image");
+  await importEntities(navigations, "navigation", assets, "image");
+  await importEntities(pages, "page", assets, "image");
+  await importEntity(site, "site", assets, "image");
+
+}
+
+async function importAssets() {
+
+  var map = new Map();
+  const files = fs.readdirSync("./data/uploads/");
+  files.forEach(function (file, index) {
+      if (!file.startsWith(".")) {
+        map.set(file, getFileData(file));
+      }
+  });
+  return map;
 }
 
 module.exports = async () => {
+
   const shouldImportSeedData = await isFirstRun();
+
+  const assets = await importAssets();
+  await importSeedData(assets);
 
   if (shouldImportSeedData) {
     try {
-      console.log('Setting up your starter...');
+      await importAssets();
       await importSeedData();
-      console.log('Ready to go');
     } catch (error) {
       console.log('Could not import seed data');
       console.error(error);

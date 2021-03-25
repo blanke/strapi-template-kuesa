@@ -1,0 +1,54 @@
+[
+  {
+    "Title": "Main",
+    "item": [
+      {
+        "__component": "page.page",
+        "page": { "id": 1 },
+        "menuItem": "For Designers"
+      },
+      {
+        "__component": "page.page",
+        "page": { "id": 2 },
+        "menuItem": "For Developers"
+      },
+      {
+        "__component": "page.page",
+        "page": { "id": 3 },
+        "menuItem": "For Teams"
+      },
+      {
+        "__component": "navigation.sub-navigation",
+        "navigation": { "id": 2 },
+        "menuItem": "Resources"
+      },
+      {
+        "__component": "page.page",
+        "page": { "id": 9 },
+        "menuItem": "Contact"
+      }
+    ]
+  },
+  {
+    "Title": "Resources",
+    "item": [
+      {
+        "__component": "page.page",
+        "page": { "id": 5 },
+        "menuItem": "Blogs"
+      },
+      {
+        "__component": "page.page",
+        "page": { "id": 10 },
+        "menuItem": "Licensing"
+      },
+      {
+        "__component": "navigation.document",
+        "menuItem": "Brochure",
+        "media": {
+          "name": "Kuesa-brochure-1b.pdf"
+        }
+      }
+    ]
+  }
+]

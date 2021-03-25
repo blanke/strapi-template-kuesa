@@ -1,0 +1,20 @@
+[
+  {
+    "title": "Get In Touch",
+    "content": "If you are interested in any of these options or need further information regarding them",
+    "slug": "further-information",
+    "page": { "id": 9 }
+  },
+  {
+    "title": "Get in touch:",
+    "content": "KDAB's experts can not only support you to get started with Kuesa 3D Studio through on-site training classes and workshops, but also integrate, customize and optimize the workflow and code for your application, if that's what you require. Contact us to get a free evaluation.",
+    "slug": "free-evaluation",
+    "page": { "id": 9 }
+  },
+  {
+    "title": "Leave a Reply",
+    "content": "Your email address will not be published. Required fields are marked *",
+    "withGimmick": "PostComment",
+    "slug": "leave-a-reply"
+  }
+]

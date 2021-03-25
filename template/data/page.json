@@ -1,0 +1,55 @@
+[
+  {
+    "friendlyUrl": "kuesa-3d-for-designers",
+    "content": [
+      {
+        "__component": "page.article",
+        "article": { "id": 2 }
+      }
+    ]
+  },
+  {
+    "friendlyUrl": "kuesa-3d-for-developers",
+    "content": [
+      {
+        "__component": "page.article",
+        "article": { "id": 1 }
+      }
+    ]
+  },
+  {
+    "friendlyUrl": "is-kuesa-for-my-team",
+    "content": [
+      {
+        "__component": "page.article",
+        "article": { "id": 4 }
+      }
+    ]
+  },
+  {
+    "friendlyUrl": "category/blogs",
+    "content": [
+      {
+        "__component": "page.article",
+        "article": { "id": 5 }
+      }
+    ]
+  },
+  {
+    "friendlyUrl": "contact-us",
+    "content": [
+      {
+        "__component": "page.article",
+        "article": { "id": 3 }
+      }
+    ]
+  },
+  {
+    "friendlyUrl": "licensing",
+    "content": [
+      {
+        "__component": "page.article"
+      }
+    ]
+  }
+]

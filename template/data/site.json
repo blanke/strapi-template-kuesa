@@ -1,0 +1,12 @@
+{
+  "id": 1,
+  "navigation": { "id": 1 },
+  "blog_board": { "id": 1 },
+  "baseUrl": "www.kuesa.com",
+  "homepage": { "id": 5 },
+  "favicon": [
+    {
+      "name": "cropped-icon.png"
+    }
+  ]
+}
