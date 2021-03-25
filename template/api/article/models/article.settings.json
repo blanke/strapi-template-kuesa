@@ -2,61 +2,58 @@
   "kind": "collectionType",
   "collectionName": "articles",
   "info": {
-    "name": "article"
+    "name": "Article",
+    "description": ""
   },
   "options": {
     "increments": true,
-    "timestamps": true
+    "timestamps": true,
+    "draftAndPublish": true
   },
   "attributes": {
     "title": {
-      "type": "string",
-      "required": true
+      "type": "string"
     },
     "description": {
-      "type": "text",
-      "required": true
+      "type": "string"
     },
-    "content": {
-      "type": "richtext",
-      "required": true
+    "author": {
+      "model": "writer",
+      "via": "articles"
     },
     "publishedAt": {
-      "type": "datetime",
-      "required": true
+      "type": "datetime"
     },
     "status": {
       "type": "enumeration",
       "enum": [
         "draft",
         "published"
-      ],
-      "required": true,
-      "default": "draft"
-    },
-    "slug": {
-      "type": "uid",
-      "targetField": "title",
-      "required": true
-    },
-    "category": {
-      "model": "category",
-      "via": "articles"
+      ]
     },
     "image": {
       "model": "file",
       "via": "related",
       "allowedTypes": [
-        "files",
         "images",
+        "files",
         "videos"
       ],
       "plugin": "upload",
-      "required": true
+      "required": false
     },
-    "author": {
-      "via": "articles",
-      "model": "writer"
+    "content": {
+      "type": "dynamiczone",
+      "components": [
+        "item.article-item",
+        "item.page-gimmick",
+        "item.part",
+        "item.two-column-table",
+        "item.part-with-image"
+      ]
+    },
+    "bottom_teaser": {
+      "model": "teaser"
     }
   }
 }

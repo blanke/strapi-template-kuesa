@@ -1,0 +1,13 @@
+{
+  "collectionName": "components_page_articles",
+  "info": {
+    "name": "article",
+    "icon": "file-alt"
+  },
+  "options": {},
+  "attributes": {
+    "article": {
+      "model": "article"
+    }
+  }
+}

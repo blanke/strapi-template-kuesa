@@ -1,0 +1,35 @@
+{
+  "kind": "collectionType",
+  "collectionName": "teasers",
+  "info": {
+    "name": "Teaser",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "content": {
+      "type": "richtext"
+    },
+    "withGimmick": {
+      "type": "enumeration",
+      "enum": [
+        "PostComment"
+      ]
+    },
+    "slug": {
+      "type": "uid",
+      "targetField": "title",
+      "required": true
+    },
+    "page": {
+      "model": "page"
+    }
+  }
+}

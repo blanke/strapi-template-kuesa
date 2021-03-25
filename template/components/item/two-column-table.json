@@ -1,0 +1,16 @@
+{
+  "collectionName": "components_page_two_column_tables",
+  "info": {
+    "name": "twoColumnTable",
+    "icon": "border-all",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "TwoColumnRow": {
+      "type": "component",
+      "repeatable": true,
+      "component": "table.two-column-row"
+    }
+  }
+}

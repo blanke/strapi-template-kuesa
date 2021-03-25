@@ -2,7 +2,7 @@
   "kind": "collectionType",
   "collectionName": "blog_boards",
   "info": {
-    "name": "BlogBoard",
+    "name": "Board",
     "description": ""
   },
   "options": {
@@ -16,8 +16,8 @@
       "required": true,
       "unique": true
     },
-    "pages": {
-      "collection": "page"
+    "articles": {
+      "collection": "article"
     }
   }
 }

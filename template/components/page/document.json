@@ -1,23 +1,21 @@
 {
-  "collectionName": "components_navigation_documents",
+  "collectionName": "components_page_documents",
   "info": {
     "name": "document",
-    "icon": "align-justify",
-    "description": ""
+    "icon": "file-import"
   },
   "options": {},
   "attributes": {
-    "media": {
+    "document": {
       "model": "file",
       "via": "related",
       "allowedTypes": [
-        "files"
+        "images",
+        "files",
+        "videos"
       ],
       "plugin": "upload",
       "required": false
-    },
-    "menuItem": {
-      "type": "string"
     }
   }
 }

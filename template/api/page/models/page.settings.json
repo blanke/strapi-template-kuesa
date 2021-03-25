@@ -11,40 +11,19 @@
     "draftAndPublish": true
   },
   "attributes": {
-    "title": {
+    "friendlyUrl": {
       "type": "string",
-      "required": true,
-      "unique": true
+      "unique": true,
+      "required": true
     },
-    "subheadline": {
-      "type": "string"
-    },
-    "headline": {
-      "type": "string"
-    },
-    "contact": {
-      "model": "contact"
-    },
-    "dynamic": {
+    "content": {
       "type": "dynamiczone",
       "components": [
-        "page.part",
-        "page.page-gimmick",
-        "page.collection",
-        "page.part-with-image",
-        "page.two-column-table"
-      ]
-    },
-    "backgroundImage": {
-      "model": "file",
-      "via": "related",
-      "allowedTypes": [
-        "images",
-        "files",
-        "videos"
+        "page.article"
       ],
-      "plugin": "upload",
-      "required": false
+      "required": true,
+      "max": 1,
+      "min": 1
     }
   }
 }

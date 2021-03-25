@@ -9,7 +9,8 @@ const {
   writers,
   articles,
   global,
-  contact
+  pages,
+  teaser
 } = require("../../data/data.json");
 
 async function isFirstRun() {

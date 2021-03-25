@@ -19,10 +19,9 @@
     "item": {
       "type": "dynamiczone",
       "components": [
-        "navigation.item",
         "navigation.sub-navigation",
         "navigation.document",
-        "navigation.page-assembled-item"
+        "page.page"
       ]
     }
   }

@@ -10,7 +10,7 @@
     "navigation": {
       "model": "navigation"
     },
-    "value": {
+    "menuItem": {
       "type": "string"
     }
   }

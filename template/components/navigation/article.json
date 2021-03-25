@@ -1,0 +1,17 @@
+{
+  "collectionName": "components_navigation_articles",
+  "info": {
+    "name": "article",
+    "icon": "th-list",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "article": {
+      "model": "article"
+    },
+    "menuItem": {
+      "type": "string"
+    }
+  }
+}

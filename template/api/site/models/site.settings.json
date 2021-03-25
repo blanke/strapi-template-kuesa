@@ -20,8 +20,19 @@
     "baseUrl": {
       "type": "string"
     },
+    "favicon": {
+      "collection": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false
+    },
     "homepage": {
-      "model": "page"
+      "model": "article"
     }
   }
 }

@@ -6,7 +6,8 @@
   },
   "options": {
     "increments": true,
-    "timestamps": true
+    "timestamps": true,
+    "draftAndPublish": true
   },
   "attributes": {
     "name": {
@@ -16,14 +17,16 @@
       "model": "file",
       "via": "related",
       "allowedTypes": [
-        "images"
+        "images",
+        "files",
+        "videos"
       ],
       "plugin": "upload",
       "required": false
     },
     "articles": {
-      "collection": "article",
-      "via": "author"
+      "via": "author",
+      "collection": "article"
     },
     "email": {
       "type": "string"

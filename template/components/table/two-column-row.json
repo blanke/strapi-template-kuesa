@@ -1,8 +1,9 @@
 {
   "collectionName": "components_table_two_column_rows",
   "info": {
-    "name": "TwoColumnRow",
-    "icon": "grip-vertical"
+    "name": "twoColumnRow",
+    "icon": "grip-vertical",
+    "description": ""
   },
   "options": {},
   "attributes": {
