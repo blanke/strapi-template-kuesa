@@ -48,8 +48,8 @@ Beside the fixed fields to describe the general subject of the article and an op
 
 This template is used by the following starters:
 
-* [strapi-starter-gatsby-kuesa](https://github.com/blanke/strapi-starter-gatsby-blog)
-* [strapi-starter-scully-kuesa](https://github.com/blanke/strapi-starter-scully-blog)
+* [strapi-starter-gatsby-kuesa](https://github.com/blanke/strapi-starter-gatsby-kuesa)
+* [strapi-starter-scully-kuesa](https://github.com/blanke/strapi-starter-scully-kuesa) (only private access)
 
 
 ## Adminstration
