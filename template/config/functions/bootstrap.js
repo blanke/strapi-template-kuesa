@@ -118,10 +118,10 @@ async function importEntities(constElements, entity, assets, image) {
 async function importSeedData(assets) {
   await setPublicPermissions({
     writer: ['find', 'findone'],
-    articleItem: ['find', 'findone'],
+    'article-item': ['find', 'findone'],
     teaser: ['find', 'findone'],
     article: ['find', 'findone'],
-    blogBoard: ['find', 'findone'],
+    'blog-board': ['find', 'findone'],
     navigation: ['find', 'findone'],
     page: ['find', 'findone'],
     site: ['find']
